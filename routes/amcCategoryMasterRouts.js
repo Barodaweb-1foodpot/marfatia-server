@@ -1,14 +1,19 @@
-const express = require('express');
-const {getAMCcategory,getAMCcategoryById,addNewAMCcategory,getAllIncDelAMCcategory,updateAMCcategory, deleteAMCcategory} = require('../controllers/amcCategoryMasterControler') 
+const express = require("express");
+const {
+    getamcCategory,
+  addNewAmcCategory,
+  getaAcCategoryById,
+  updateAmcCategory,
+  deleteamcCategory,
+  getAllIncDelAmcCategory,
+} = require("../controllers/amcCategoryMasterControler");
 const router = express.Router();
 
-
-router.get('/',getAMCcategory)
-router.get('/all',getAllIncDelAMCcategory)
-router.post('/',addNewAMCcategory)
-router.get('/:id',getAMCcategoryById)
-router.put('/:id',updateAMCcategory)
-router.delete('/:id',deleteAMCcategory)
-
+router.get("/", getamcCategory);
+router.get("/all", getAllIncDelAmcCategory);
+router.post("/", addNewAmcCategory);
+router.get("/:id", getaAcCategoryById);
+router.put("/:id", updateAmcCategory);
+router.delete("/:id", deleteamcCategory);
 
 module.exports = router;

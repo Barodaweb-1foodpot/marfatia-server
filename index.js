@@ -8,8 +8,10 @@ const role = require('./routes/roleRoutes');
 const auth = require('./routes/authRouts');
 const user = require('./routes/userRouts');
 const globleErrorHandler = require('./controllers/errorController')
-const AMCcategory = require('./routes/amcCategoryMasterRouts')
+const AMCcategoryMaster = require('./routes/amcCategoryMasterRouts')
+const amcSchemeRouter = require('./routes/amcSchemeRoutes')
 const withdraw = require('./routes/WithdrawMarfatiaRouts')
+const transfer = require('./routes/TransferRouts')
 
 const appError = require('./utils/appError')
 
@@ -21,7 +23,7 @@ app.use(morgan( "dev",
 app.use(cors())
 
 // -----------database connection--------------
-const mongoString = 'mongodb+srv://rango:wUDPbtLUp7ZDQZQr@cluster0.2bxued0.mongodb.net/marfatia-database?retryWrites=true&w=majority';
+const mongoString = 'mongodb+srv://barodaweb:Barodaweb-mongo2022@cluster0.jruibih.mongodb.net/marfatia_database?retryWrites=true&w=majority';
 mongoose.connect(mongoString,{autoIndex:true})
 .then(()=>console.log('connected to Database....')).catch(e=>console.log('oops..',e))
 
@@ -35,8 +37,10 @@ app.use('/api/category/',category)
 app.use('/api/role/',role)
 app.use('/api/auth/',auth)
 app.use('/api/user/',user)
-app.use('/api/amc-category/',AMCcategory)
+app.use('/api/amc-category/',AMCcategoryMaster)
 app.use('/api/withdrow',withdraw)
+app.use('/api/amc-scheme',amcSchemeRouter)
+app.use('/api/transfer',transfer)
 
 app.all('*',(req,res,next)=>{
     // return res.status(400).json({ error: { message: "path not found" } });

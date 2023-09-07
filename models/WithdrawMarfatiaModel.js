@@ -40,6 +40,6 @@ const clientSchema = new mongoose.Schema({
   }
 });
 
-const WithdrawMarfatiaModel = mongoose.model('withdraw_marfatia', clientSchema);
+const WithdrawMarfatiaModel = mongoose.model('withdraw', clientSchema);
 
 module.exports = WithdrawMarfatiaModel;

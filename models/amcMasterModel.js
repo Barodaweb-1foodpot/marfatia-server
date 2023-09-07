@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 
-const AMCcategorySchema = new mongoose.Schema({
-    CategoryName: {
+const amcSchema = new mongoose.Schema({
+  AMCId: {
+    type: Number,
+    required: true
+  },  AMCName: {
     type: String,
-    required: true,
-    minlength: 3
-  },
-
+    required: true
+  },    
   deleted: {
     type: Boolean,
     default: false,
@@ -27,6 +28,6 @@ const AMCcategorySchema = new mongoose.Schema({
   }
 });
 
-const amcCategory = mongoose.model('AMC_category', AMCcategorySchema);
+const AMCMaster = mongoose.model('AMC_Master', amcSchema);
 
-module.exports = amcCategory;
+module.exports = AMCMaster;

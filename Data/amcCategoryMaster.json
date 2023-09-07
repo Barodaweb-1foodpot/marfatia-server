@@ -1,0 +1,90 @@
+[
+    {
+      "AMCCatId": 1,
+      "CategoryName": "Balanced"
+    },
+    {
+      "AMCCatId": 2,
+      "CategoryName": "Debt - Floating Rate"
+    },
+    {
+      "AMCCatId": 3,
+      "CategoryName": "Debt - Institutional"
+    },
+    {
+      "AMCCatId": 4,
+      "CategoryName": "Debt - Long Term"
+    },
+    {
+      "AMCCatId": 5,
+      "CategoryName": "Debt - Short Term"
+    },
+    {
+      "AMCCatId": 6,
+      "CategoryName": "Debt - Speciality"
+    },
+    {
+      "AMCCatId": 7,
+      "CategoryName": "Equity - Banking"
+    },
+    {
+      "AMCCatId": 8,
+      "CategoryName": "Equity - FMCG"
+    },
+    {
+      "AMCCatId": 9,
+      "CategoryName": "Equity - MNC"
+    },
+    {
+      "AMCCatId": 10,
+      "CategoryName": "Equity - Others"
+    },
+    {
+      "AMCCatId": 11,
+      "CategoryName": "Equity - Pharma"
+    },
+    {
+      "AMCCatId": 12,
+      "CategoryName": "Equity - Technology"
+    },
+    {
+      "AMCCatId": 13,
+      "CategoryName": "Equity Diversified"
+    },
+    {
+      "AMCCatId": 14,
+      "CategoryName": "Equity Index"
+    },
+    {
+      "AMCCatId": 15,
+      "CategoryName": "Equity Institutional"
+    },
+    {
+      "AMCCatId": 16,
+      "CategoryName": "Equity Tax Saving"
+    },
+    {
+      "AMCCatId": 17,
+      "CategoryName": "Fixed Maturity Plan"
+    },
+    {
+      "AMCCatId": 18,
+      "CategoryName": "Gold"
+    },
+    {
+      "AMCCatId": 19,
+      "CategoryName": "Hybrid"
+    },
+    {
+      "AMCCatId": 20,
+      "CategoryName": "Money Market"
+    },
+    {
+      "AMCCatId": 21,
+      "CategoryName": "Money Market - Institutional"
+    },
+    {
+      "AMCCatId": 22,
+      "CategoryName": "Monthly Income Plan"
+    }
+   ]

@@ -11,9 +11,7 @@
    "ImageLoc": "/uploads/TransferReceipts/hdfc_mutual_fund.png",
    "Address": "pariwar",
    "Comment": "test",
-   "AddedOn": "2016-06-08 10:05:02",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2016-06-08 10:05:02"
  },
  {
    "FirstName": "satish",
@@ -27,9 +25,7 @@
    "ImageLoc": "",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2016-07-21 9:16:36",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2016-07-21 9:16:36"
  },
  {
    "FirstName": "SNEHA",
@@ -43,9 +39,7 @@
    "ImageLoc": "",
    "Address": "PALEJ",
    "Comment": "",
-   "AddedOn": "2016-09-10 20:56:53",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2016-09-10 20:56:53"
  },
  {
    "FirstName": "Navinchandra",
@@ -59,9 +53,7 @@
    "ImageLoc": "",
    "Address": "257 CHAPALITA DR,ENCINITAS,CA",
    "Comment": "",
-   "AddedOn": "2017-08-28 9:17:57",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2017-08-28 9:17:57"
  },
  {
    "FirstName": "Nidhi",
@@ -75,9 +67,7 @@
    "ImageLoc": "",
    "Address": "This is test mail from Barodaweb Company where you have designed the website to check page is working properly or not. Please forward the mail to check.",
    "Comment": "This is test mail from Barodaweb Company where you have designed the website to check page is working properly or not. Please forward the mail to check.",
-   "AddedOn": "2017-12-18 10:59:58",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2017-12-18 10:59:58"
  },
  {
    "FirstName": "vishal",
@@ -91,9 +81,7 @@
    "ImageLoc": "",
    "Address": "F 46-640 sagar Apt Near Bhavsar Hostel, Nava Vadaj Ahmedabad-13",
    "Comment": "",
-   "AddedOn": "2018-05-16 7:17:28",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2018-05-16 7:17:28"
  },
  {
    "FirstName": "Anil",
@@ -107,9 +95,7 @@
    "ImageLoc": "",
    "Address": "12 Aditya Honeypark road",
    "Comment": "Adajan",
-   "AddedOn": "9/17/2018 18:14:02",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "9/17/2018 18:14:02"
  },
  {
    "FirstName": "APEXA",
@@ -123,9 +109,7 @@
    "ImageLoc": "",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2018-09-27 22:04:45",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2018-09-27 22:04:45"
  },
  {
    "FirstName": "RAVIN",
@@ -139,9 +123,7 @@
    "ImageLoc": "/uploads/TransferReceipts/Screenshot_20181022-173215.png",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2018-10-23 17:23:55",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2018-10-23 17:23:55"
  },
  {
    "FirstName": "RAVIN",
@@ -155,9 +137,7 @@
    "ImageLoc": "/uploads/TransferReceipts/WhatsApp_Image_2018-11-14_at_5.08.05_PM.jpeg",
    "Address": "179 CHAMUNDA NAGAR - 2 NR SAYAJIPARK AJWA ROAD VADODARA 390019",
    "Comment": "",
-   "AddedOn": "2018-11-14 22:40:02",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2018-11-14 22:40:02"
  },
  {
    "FirstName": "Hemal",
@@ -171,9 +151,7 @@
    "ImageLoc": "",
    "Address": "2, SHANTI NAGAR, JUNAGADH ROAD JETPUR",
    "Comment": "",
-   "AddedOn": "2018-11-30 15:53:22",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2018-11-30 15:53:22"
  },
  {
    "FirstName": "RAVIN",
@@ -187,9 +165,7 @@
    "ImageLoc": "/uploads/TransferReceipts/WhatsApp_Image_2018-12-05_at_09.48.52.jpeg",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2018-12-05 15:19:41",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2018-12-05 15:19:41"
  },
  {
    "FirstName": "RAVIN",
@@ -203,9 +179,7 @@
    "ImageLoc": "/uploads/TransferReceipts/WhatsApp_Image_2018-12-05_at_09.48.52.jpeg",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2018-12-05 15:19:41",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2018-12-05 15:19:41"
  },
  {
    "FirstName": "VALJIBHAI",
@@ -219,9 +193,7 @@
    "ImageLoc": "",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2018-12-07 16:20:25",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2018-12-07 16:20:25"
  },
  {
    "FirstName": "Anil",
@@ -235,9 +207,7 @@
    "ImageLoc": "",
    "Address": "12 Aditya row House Near Saraswati Vidyalaya BH Honeyprk road Adajan 395009.Surat",
    "Comment": "Payment for stock purchase",
-   "AddedOn": "2019-02-14 7:03:04",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2019-02-14 7:03:04"
  },
  {
    "FirstName": "RAVIN",
@@ -251,9 +221,7 @@
    "ImageLoc": "/uploads/TransferReceipts/WhatsApp_Image_2019-03-18_at_10.06.52.jpeg",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2019-03-18 15:39:21",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2019-03-18 15:39:21"
  },
  {
    "FirstName": "Ravin",
@@ -267,9 +235,7 @@
    "ImageLoc": "/uploads/TransferReceipts/Screenshot_20190514-191048.png",
    "Address": "179 chamunda nagar 2 sayaji park ajwa road vadodara",
    "Comment": "",
-   "AddedOn": "2019-05-15 0:44:37",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2019-05-15 0:44:37"
  },
  {
    "FirstName": "RAVIN",
@@ -283,9 +249,7 @@
    "ImageLoc": "/uploads/TransferReceipts/WhatsApp_Image_2019-08-23_at_9.51.18_AM.jpeg",
    "Address": "C-179 CHAMUNDA NAGAR-2 SAYAJI PARK AJWAROAD VADODARA",
    "Comment": "",
-   "AddedOn": "2019-08-23 15:28:14",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2019-08-23 15:28:14"
  },
  {
    "FirstName": "ketan",
@@ -299,9 +263,7 @@
    "ImageLoc": "",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2020-03-26 6:16:35",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2020-03-26 6:16:35"
  },
  {
    "FirstName": "SWETA",
@@ -315,9 +277,7 @@
    "ImageLoc": "/uploads/TransferReceipts/KAPIL_CHUDASMA.jpg",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2020-07-30 17:36:17",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2020-07-30 17:36:17"
  },
  {
    "FirstName": "USHABEN",
@@ -331,9 +291,7 @@
    "ImageLoc": "",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2020-07-30 17:47:03",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2020-07-30 17:47:03"
  },
  {
    "FirstName": "RAVIN",
@@ -347,9 +305,7 @@
    "ImageLoc": "/uploads/TransferReceipts/RAVIN.jpg",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2020-08-01 15:59:48",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2020-08-01 15:59:48"
  },
  {
    "FirstName": "Geetaben",
@@ -363,8 +319,6 @@
    "ImageLoc": "",
    "Address": "",
    "Comment": "",
-   "AddedOn": "2020-08-07 6:21:11",
-   "UpdatedOn": null,
-   "IsActive": 1
+   "createdAt": "2020-08-07 6:21:11"
  }
 ]

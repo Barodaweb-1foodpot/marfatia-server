@@ -1,9 +1,14 @@
 const express = require('express');
-const {addNewWithdrow} = require('../controllers/withdrowMarfatiaController') 
+const {getWithdraw,addNewWithdraw,getWithdrawById,updateWithdraw,deleteWithdraw,getAllIncDelWithdraw} = require('../controllers/withdrowMarfatiaController') 
 const router = express.Router();
 
 
-router.get('/',addNewWithdrow)
+router.get('/',getWithdraw)
+router.post('/',addNewWithdraw)
+router.get('/all',getAllIncDelWithdraw)
+router.get('/:id',getWithdrawById)
+router.put('/:id',updateWithdraw)
+router.delete('/:id',deleteWithdraw)
 
 
 module.exports = router;
