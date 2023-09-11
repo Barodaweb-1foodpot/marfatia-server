@@ -70,16 +70,16 @@ module.exports.createUser = catchAsync(async (req, res, next) => {
 module.exports.loginUser = catchAsync(async (req, res, next) => {
   var { email, password } = new userModel(req.body);
   if (!email || !password)
-    next(new appError(`provide proper credentials`, 400));
+    return next(new appError(`provide proper credentials`, 400));
 
   const user = await userModel.findOne({ email: req.body.email });
-  if (!user) next(new appError(`incorrect credentials`, 400));
+  if (!user) return next(new appError(`incorrect credentials`, 401));
 
   const validPassword = bcrypt.compareSync(req.body.password, user.password);
-  if (!validPassword) next(new appError(`incorrect credentials`, 400));
+  if (!validPassword) return next(new appError(`incorrect credentials`, 401));
 
   const findRole = await roleModel.findById(user.role);
-  if (!findRole) next(new appError(`role not found`, 500));
+  if (!findRole) return next(new appError(`role not found`, 500));
 
   const token = jwt.sign({ userId: user._id }, "jwtPrivateKey", {
     expiresIn: "1d",
@@ -91,7 +91,7 @@ module.exports.forgetPassword = catchAsync(async (req, res, next) => {
   const { email } = req.body;
   const user = await userModel.findOne({ email: email });
 
-  if (!user) next(new appError(`The user does not appear to be registered.`, 400));
+  if (!user) return next(new appError(`The user does not appear to be registered.`, 400));
 
   const Token = uuidv4();
 
@@ -102,7 +102,7 @@ module.exports.forgetPassword = catchAsync(async (req, res, next) => {
   );
 
   if (!tokenAddedToUser) {
-    next(new appError(`The user does not appear to be registered.`, 404));
+    return next(new appError(`The user does not appear to be registered.`, 404));
   }
 
   const resetLink = `${process.env.CLIENT_URL}/auth-pass-change?token=${Token}&id=${user._id}`;
@@ -208,7 +208,7 @@ module.exports.editProfile = catchAsync(async (req, res, next) => {
 
   const ProfileToChange = userModel.findById(userId);
   if (!ProfileToChange || ProfileToChange.deleted) {
-    next(new appError(`userModel not found`, 400));
+    returnnext(new appError(`userModel not found`, 400));
   }
   const updateData = {};
   // Check if any changes are made before updating the 'updatedAt' field.

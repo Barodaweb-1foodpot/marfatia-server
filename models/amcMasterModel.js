@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 
 const amcSchema = new mongoose.Schema({
   AMCId: {
-    type: Number,
-    required: true
+    type: Number
   },  AMCName: {
     type: String,
     required: true

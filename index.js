@@ -12,6 +12,11 @@ const AMCcategoryMaster = require('./routes/amcCategoryMasterRouts')
 const amcSchemeRouter = require('./routes/amcSchemeRoutes')
 const withdraw = require('./routes/WithdrawMarfatiaRouts')
 const transfer = require('./routes/TransferRouts')
+const banner = require('./routes/bannerRouts')
+const gallery = require('./routes/galleryMasterRouts')
+const galleryCategory = require('./routes/galleryCategoryRouts')
+const Downloads = require('./routes/DownloadsRouts')
+const Complain = require('./routes/complainRouts')
 
 const appError = require('./utils/appError')
 
@@ -33,6 +38,9 @@ app.use(express.json());
 
 
 app.use('/api/user-images',express.static('images'))
+app.use('/api/banner-images',express.static('images/banner'))
+app.use('/api/gallery-images',express.static('images/gallery'))
+app.use('/api/downloads',express.static('images/downloads'))
 app.use('/api/category/',category)
 app.use('/api/role/',role)
 app.use('/api/auth/',auth)
@@ -41,6 +49,11 @@ app.use('/api/amc-category/',AMCcategoryMaster)
 app.use('/api/withdrow',withdraw)
 app.use('/api/amc-scheme',amcSchemeRouter)
 app.use('/api/transfer',transfer)
+app.use('/api/banner',banner)
+app.use('/api/gallery',gallery)
+app.use('/api/gallery-category',galleryCategory)
+app.use('/api/downloads',Downloads)
+app.use('/api/complain',Complain)
 
 app.all('*',(req,res,next)=>{
     // return res.status(400).json({ error: { message: "path not found" } });
@@ -48,7 +61,7 @@ app.all('*',(req,res,next)=>{
     // err.status = 'fail'
     // err.statusCode = 404 
     // next(err)
-    return next(new appError(`${req.originalUrl} not found!`, 400));
+    return next(new appError(`route ${req.originalUrl} not found!`, 400));
 
 });
 

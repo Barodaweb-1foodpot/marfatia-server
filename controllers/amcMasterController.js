@@ -1,94 +1,91 @@
-const withdraw = require("../models/WithdrawMarfatiaModel");
+const AMCMaster = require("../models/amcMasterModel");
 const appError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
-exports.getWithdraw = catchAsync(async (req, res, next) => {
-  const recordExists = await withdraw.find({ deleted: false });
+exports.getAmc = catchAsync(async (req, res, next) => {
+  const recordExists = await AMCMaster.find({ deleted: false }).lean();
   if (recordExists.length === 0) {
-    res.status(204).end();
-  } else {
-    res.status(200).send({ data: recordExists });
+    return res.status(204).end();
   }
+  return res.status(200).json({ data: recordExists });
 });
 
-exports.addNewWithdraw = catchAsync(async (req, res, next) => {
+exports.addNewAmc = catchAsync(async (req, res, next) => {
   const body = {
-    ClientCode: req.body.ClientCode,
-
-    Segment: req.body.Segment,
-    Name: req.body.Name,
-    Email: req.body.Email,
-    ContactNo: req.body.ContactNo,
-    PAN: req.body.PAN,
-    Amount: req.body.Amount,
+    AMCName: req.body.AMCName,
   };
-
-  if (WithdrawIsUnique) {
-    const newWithdrawAdded = await withdraw.create(body);
+  const CategoryIsUnique =
+    (await AMCMaster.find({
+      AMCName: req.body.AMCName,
+      deleted: false,
+    }).count()) === 0;
+  if (CategoryIsUnique) {
+    const newCategoryAdded = await AMCMaster.create(body);
     res.status(201).json({
-      data: newWithdrawAdded,
-      message: "Withdraw added successfully",
+      data: newCategoryAdded,
+      message: "Category added successfully",
     });
+  } else {
+    return next(
+      new appError(
+        `category with name '${body.AMCName}' alrady exist in categories`,
+        400
+      )
+    );
   }
 });
 
-exports.getWithdrawById = catchAsync(async (req, res, next) => {
-  const recordExists = await withdraw.findById(req.params.id);
+exports.getAmcById = catchAsync(async (req, res, next) => {
+  const recordExists = await AMCMaster.findById(req.params.id);
   if (!recordExists || recordExists.deleted) {
-    next(new appError(`Withdraw not found`, 400));
+    return next(new appError(`Amc not found`, 400));
   } else {
     res.status(200).send({ data: recordExists });
   }
 });
 
-exports.updateWithdraw = catchAsync(async (req, res, next) => {
-  const WithdrawId = req.params.id;
-  const WithdrawToUpdate = await withdraw.findById(WithdrawId);
+exports.updateAmc = catchAsync(async (req, res, next) => {
+  const AmcId = req.params.id;
+  const AmcToUpdate = await AMCMaster.findById(AmcId);
 
-  if (!WithdrawToUpdate || WithdrawToUpdate.deleted) {
-    next(new appError(`Withdraw not found`, 400));
+  if (!AmcToUpdate || AmcToUpdate.deleted) {
+    return next(new appError(`Amc not found`, 400));
   }
 
   const updateData = {
-    ClientCode: req.body.ClientCode,
-    Segment: req.body.Segment,
-    Name: req.body.Name,
-    Email: req.body.Email,
-    ContactNo: req.body.ContactNo,
-    PAN: req.body.PAN,
-    Amount: req.body.Amount,
+    AMCName: req.body.AMCName,
+    updatedAt: Date.now(),
   };
-  if (Object.keys(updateData).length === 0) {
-    next(new appError(`No changes were made to the Withdraw data`, 400));
-  }
-  updateData.updatedAt = Date.now();
-  await withdraw.findByIdAndUpdate(WithdrawId, updateData);
-  const updatedWithdraw = await withdraw.findById(WithdrawId);
+
+  await AMCMaster.findByIdAndUpdate(AmcId, updateData);
+  const updatedAmc = await AMCMaster.findById(AmcId);
   res.status(200).json({
-    message: "Withdraw updated successfully",
-    data: updatedWithdraw,
+    message: "Amc updated successfully",
+    data: updatedAmc,
   });
 });
 
-exports.deleteWithdraw = catchAsync(async (req, res, next) => {
-  const amcCategoryToUpdate = await withdraw.findById(req.params.id);
+exports.deleteAmc = catchAsync(async (req, res, next) => {
+  const amcCategoryToUpdate = await AMCMaster.findById(req.params.id);
 
   if (!amcCategoryToUpdate || amcCategoryToUpdate.deleted) {
-    next(new appError(`Category not found`, 400));
+    return next(new appError(`Category not found`, 400));
   }
 
   const updateData = {
     deleted: true,
     deletedAt: Date.now(),
   };
-  await withdraw.findByIdAndUpdate(req.params.id, updateData);
+  await AMCMaster.findByIdAndUpdate(req.params.id, updateData);
+  return res.status(204).end();
 });
 
-exports.getAllIncDelWithdraw = catchAsync(async (req, res, next) => {
-  const recordExists = await withdraw.find();
+exports.getAllIncDelAmc = catchAsync(async (req, res, next) => {
+  const recordExists = await AMCMaster.find().lean();
+
   if (recordExists.length === 0) {
-    res.status(204).end();
-  } else {
-    res.status(200).send({ data: recordExists });
+    return res.status(204).end();
   }
+
+  return res.status(200).json({ data: recordExists });
 });
