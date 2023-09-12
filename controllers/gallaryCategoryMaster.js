@@ -14,7 +14,6 @@ exports.addNewGallaryCategory = catchAsync(async (req, res, next) => {
   const body = {
     gallaryCategoryTitle: req.body.gallaryCategoryTitle,
     description: req.body.description,
-    active:req.body.active,
     imagePath: req.file ? req.file.filename : "",
   };
   const ItemIsUnique =

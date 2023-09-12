@@ -1,0 +1,24 @@
+FirstName,LastName,Email,ContactNo,Amount,BankAcountNo,BankName,BranchName,ImageLoc,Address,Comment,createdAt,updatedAt,active
+rahul,jain,rahul@barodaweb.net,9104690268,500,510265423223,hdfc,alkapuri,/uploads/TransferReceipts/hdfc_mutual_fund.png,pariwar,test,2016-06-08 10:05:02,NULL,1
+satish,patel,sumtush_patel@yahoo.co.in,9998215440,10000,5331020000182,hdfcbank,varachha,,,,2016-07-21 9:16:36,NULL,1
+SNEHA,SHAH,mitesh301027@gmail.com,9879139361,5000,22501000655,ICICI BANK,PALEJ,,PALEJ,,2016-09-10 20:56:53,NULL,1
+Navinchandra,PARIKH,nila130@gmail.com,9193424647,10000,10501000014111,INDIAN OVERSEAS BANK,MEHTA POLE,,"257 CHAPALITA DR,ENCINITAS,CA",,2017-08-28 9:17:57,NULL,1
+Nidhi,Bhatt,nidhi@barodaweb.net,123456789,0,0,test,test,,This is test mail from Barodaweb Company where you have designed the website to check page is working properly or not. Please forward the mail to check.,This is test mail from Barodaweb Company where you have designed the website to check page is working properly or not. Please forward the mail to check.,2017-12-18 10:59:58,NULL,1
+vishal,parikh,vparikh_2006@yahoo.co.in,9427089767,14000,10169177948,State Bank Of india,Nava Vadaj,,"F 46-640 sagar Apt Near Bhavsar Hostel, Nava Vadaj Ahmedabad-13",,2018-05-16 7:17:28,NULL,1
+Anil,Mistry,anilmistry@rediffmail.com,9377660051,11728,5201523628,ICICI BANK,ANAND MAHAL ROAD.ADAJAN,,12 Aditya Honeypark road,Adajan,9/17/2018 18:14:02,NULL,1
+APEXA,BHATT,ahbhatt332@yahco.com,9825029616,111565,10328882453,STATE BANK OF INDIA,AKSHAR CHOWK,,,,2018-09-27 22:04:45,NULL,1
+RAVIN,PARMAR,RAVINPARMAR786@GMAIL.COM,7567577042,69,1006104000128117,IDBI BANK,AMBALAL PARK,/uploads/TransferReceipts/Screenshot_20181022-173215.png,,,2018-10-23 17:23:55,NULL,1
+RAVIN,PARMAR,RAVINPARMAR786@GMAIL.COM,7567577042,10,1006104000128117,IDBI BANK,AMBALAL PARK,/uploads/TransferReceipts/WhatsApp_Image_2018-11-14_at_5.08.05_PM.jpeg,179 CHAMUNDA NAGAR - 2 NR SAYAJIPARK AJWA ROAD VADODARA 390019,,2018-11-14 22:40:02,NULL,1
+Hemal,Panchamia,hemal.panchamia@yahoo.com,9898633773,200000,5651000006219,HDFC BANK,JETPUR,,"2, SHANTI NAGAR, JUNAGADH ROAD JETPUR",,2018-11-30 15:53:22,NULL,1
+RAVIN,PARMAR,ravinparmar786@gmail.com,7567577042,1089,1006104000128117,IDBI BANK,AMBALAL PARK,/uploads/TransferReceipts/WhatsApp_Image_2018-12-05_at_09.48.52.jpeg,,,2018-12-05 15:19:41,NULL,1
+RAVIN,PARMAR,ravinparmar786@gmail.com,7567577042,1089,1006104000128117,IDBI BANK,AMBALAL PARK,/uploads/TransferReceipts/WhatsApp_Image_2018-12-05_at_09.48.52.jpeg,,,2018-12-05 15:19:41,NULL,1
+VALJIBHAI,CHAVDA,VIPULCHADVA2014@GMAIL.COM,9909007521,35700,16540100001745,BOB,FERTILIZER TOWNSHIP,,,,2018-12-07 16:20:25,NULL,1
+Anil,Mistry,anilmistry@rediffmail.com,9377660051,15000,5201523628,ICICI BANK,ADAJAN,,12 Aditya row House Near Saraswati Vidyalaya BH Honeyprk road Adajan 395009.Surat,Payment for stock purchase,2019-02-14 7:03:04,NULL,1
+RAVIN,PARMAR,RAVINPARMAR786@GMAIL.COM,7567577042,2065,1006104000128117,IDBI BANK,AMBALAL PARK,/uploads/TransferReceipts/WhatsApp_Image_2019-03-18_at_10.06.52.jpeg,,,2019-03-18 15:39:21,NULL,1
+Ravin,PARMAR,ravinparmar786@gmail.com,7567577042,1592,1006104000128117,IDBI BANK,Ambalal park,/uploads/TransferReceipts/Screenshot_20190514-191048.png,179 chamunda nagar 2 sayaji park ajwa road vadodara,,2019-05-15 0:44:37,NULL,1
+RAVIN,PARMAR,RAVINPARMAR786@GMAIL.COM,7567577042,2500,1006104000128117,IDBI BANK,AMBALAL PARK,/uploads/TransferReceipts/WhatsApp_Image_2019-08-23_at_9.51.18_AM.jpeg,C-179 CHAMUNDA NAGAR-2 SAYAJI PARK AJWAROAD VADODARA,,2019-08-23 15:28:14,NULL,1
+ketan,chhapgar,ketanchhapgar@gmail.com,9825309419,100,47010100262354,axis bank,ghod dod road,,,,2020-03-26 6:16:35,NULL,1
+SWETA,CHUDASMA,akki8985@gmail.com,8530472224,19000,289104000059167,IDBI BANK,KABIR PLAZA MAKKARPURA ROAD,/uploads/TransferReceipts/KAPIL_CHUDASMA.jpg,,,2020-07-30 17:36:17,NULL,1
+USHABEN,SHAH,dev_investments@yahoo.com,9879578448,83,10389791175,STATE BANK OF INDIA,VIP ROAD,,,,2020-07-30 17:47:03,NULL,1
+RAVIN,PARMAR,RAVINPARMAR786@GMAIL.COM,7567577042,1153,1006104000128117,IDBI BANK,AMBALAL PARK,/uploads/TransferReceipts/RAVIN.jpg,,,2020-08-01 15:59:48,NULL,1
+Geetaben,Prajapati,Prajapatinilesh10@gmail.com,9974900749,1000,1471930002775,Hdfc Bank,Karelibaug,,,,2020-08-07 6:21:11,NULL,1

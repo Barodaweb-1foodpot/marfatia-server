@@ -17,9 +17,10 @@ const gallery = require('./routes/galleryMasterRouts')
 const galleryCategory = require('./routes/galleryCategoryRouts')
 const Downloads = require('./routes/DownloadsRouts')
 const Complain = require('./routes/complainRouts')
+const Content = require('./routes/contentRouts')
+const News = require('./routes/newsRouts')
 
 const appError = require('./utils/appError')
-
 
 var morgan = require('morgan')
 app.use(morgan( "dev",
@@ -31,8 +32,6 @@ app.use(cors())
 const mongoString = 'mongodb+srv://barodaweb:Barodaweb-mongo2022@cluster0.jruibih.mongodb.net/marfatia_database?retryWrites=true&w=majority';
 mongoose.connect(mongoString,{autoIndex:true})
 .then(()=>console.log('connected to Database....')).catch(e=>console.log('oops..',e))
-
-
 
 app.use(express.json());
 
@@ -54,13 +53,11 @@ app.use('/api/gallery',gallery)
 app.use('/api/gallery-category',galleryCategory)
 app.use('/api/downloads',Downloads)
 app.use('/api/complain',Complain)
+app.use('/api/content-master',Content)
+app.use('/api/news-master',News)
 
 app.all('*',(req,res,next)=>{
-    // return res.status(400).json({ error: { message: "path not found" } });
-    // const err =  new Error("not found")
-    // err.status = 'fail'
-    // err.statusCode = 404 
-    // next(err)
+
     return next(new appError(`route ${req.originalUrl} not found!`, 400));
 
 });

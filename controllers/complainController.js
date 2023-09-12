@@ -12,7 +12,7 @@ exports.getComplains = catchAsync(async (req, res, next) => {
 
 exports.addComplains = catchAsync(async (req, res, next) => {
     console.log("called")
-  const randomFourDigitNumber = Math.floor(1000 + Math.random() * 9000);
+  const randomFourDigitNumber = Math.floor(10000 + Math.random() * 90000);
 
   const body = {
     complainNo: "M0" + randomFourDigitNumber.toString(),
@@ -54,9 +54,7 @@ exports.updateComplain = catchAsync(async (req, res, next) => {
     updatedAt: Date.now(),
   };
 
-  if (req.file) {
-    updateData.imagePath = req.file.filename;
-  }
+  
   await ComplainModela.findByIdAndUpdate(Complain, updateData);
   const updatedRecord = await ComplainModela.findById(Complain);
   res.status(200).json({

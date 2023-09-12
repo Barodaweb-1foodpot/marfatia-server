@@ -55,6 +55,7 @@ exports.updateBanner = catchAsync(async (req, res, next) => {
     bannerTitle: req.body.bannerTitle,
     description: req.body.description,
     bannerText: req.body.bannerText,
+    active:req.body.active,
     updatedAt: Date.now(),
   };
   if (req.file) {
