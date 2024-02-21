@@ -6,7 +6,7 @@ const {
   deleteAmc,
   getAllIncDelAmc,
   getAmc,
-} = require("../controllers/amcCategoryMasterControler");
+} = require("../controllers/amcMasterController");
 const router = express.Router();
 
 router.get("/", getAmc);

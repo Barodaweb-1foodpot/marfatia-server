@@ -19,6 +19,10 @@ const Downloads = require('./routes/DownloadsRouts')
 const Complain = require('./routes/complainRouts')
 const Content = require('./routes/contentRouts')
 const News = require('./routes/newsRouts')
+const Email = require('./routes/emailSettingRouts')
+const quickContect = require('./routes/quickContectRouts')
+const Feedback = require("./routes/feedbackRouts")
+const DownloadForm = require("./routes/DownloadFormsRouts")
 
 const appError = require('./utils/appError')
 
@@ -55,6 +59,10 @@ app.use('/api/downloads',Downloads)
 app.use('/api/complain',Complain)
 app.use('/api/content-master',Content)
 app.use('/api/news-master',News)
+app.use('/api/email-settings',Email)
+app.use('/api/quick-connect',quickContect)
+app.use('/api/feedback',Feedback)
+app.use('/api/download-form',DownloadForm)
 
 app.all('*',(req,res,next)=>{
 
