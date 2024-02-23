@@ -6,12 +6,12 @@ const {
   getAllIncDel,
   getDownloadById,
   getDownloads,
-} = require("../controllers/downloadsFormsController");
+} = require("./controllers/downloadsFormsController");
 const router = express.Router();
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "images/downloads/");
+    cb(null, "content/downloads");
   },
   filename: (req, file, cb) => {
     const originalFileName = file.originalname;
@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 router.get("/", getDownloads);
 router.get("/all", getAllIncDel);
-router.post("/", upload.single("filePath"),addNewDownload);
+// router.post("/", upload.single("filePath"),addNewDownload);
 router.get("/:id", getDownloadById);
 router.put("/:id",upload.single("filePath"), updateDownload);
 router.delete("/:id", deleteDownload);

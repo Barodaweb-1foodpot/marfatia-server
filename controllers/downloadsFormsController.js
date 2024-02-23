@@ -36,6 +36,7 @@ exports.addNewDownload = catchAsync(async (req, res, next) => {
 });
 
 exports.getDownloadById = catchAsync(async (req, res, next) => {
+  console.log("Why this API called");
   const recordExists = await DownloadFormModel.findById(req.params.id);
   if (!recordExists || recordExists.deleted) {
     return next(new appError(`Download Category not found`, 400));
