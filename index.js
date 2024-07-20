@@ -23,6 +23,8 @@ const Email = require('./routes/emailSettingRouts')
 const quickContect = require('./routes/quickContectRouts')
 const Feedback = require("./routes/feedbackRouts")
 const DownloadForm = require("./routes/DownloadFormsRouts")
+const StopTrade = require("./routes/StopTrade")
+
 
 const appError = require('./utils/appError')
 
@@ -63,6 +65,8 @@ app.use('/api/email-settings',Email)
 app.use('/api/quick-connect',quickContect)
 app.use('/api/feedback',Feedback)
 app.use('/api/download-form',DownloadForm)
+app.use('/api', StopTrade)
+
 
 app.all('*',(req,res,next)=>{
 
