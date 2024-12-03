@@ -48,9 +48,9 @@ exports.updateDownload = catchAsync(async (req, res, next) => {
   const DownloadId = req.params.id;
   const RecordToUpdate = await DownloadsModel.findById(DownloadId);
 
-  if (!RecordToUpdate || RecordToUpdate.deleted) {
-    return next(new appError(`Download Category item not found`, 400));
-  }
+  // if (!RecordToUpdate || RecordToUpdate.deleted) {
+  //   return next(new appError(`Download Category item not found`, 400));
+  // }
   const updateData = {
 
     fileName: req.body.fileName,
