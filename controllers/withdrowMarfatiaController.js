@@ -1,6 +1,7 @@
 const withdraw = require("../models/WithdrawMarfatiaModel");
 const appError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
+const nodemailer = require("nodemailer");
 
 exports.getWithdraw = catchAsync(async (req, res, next) => {
   const recordExists = await withdraw.find({ deleted: false });
@@ -10,6 +11,7 @@ exports.getWithdraw = catchAsync(async (req, res, next) => {
     res.status(200).send({ data: recordExists });
   }
 });
+
 
 exports.addNewWithdraw = catchAsync(async (req, res, next) => {
   const body = {
@@ -29,6 +31,74 @@ exports.addNewWithdraw = catchAsync(async (req, res, next) => {
       data: newWithdrawAdded,
       message: "Withdraw added successfully",
     });
+
+    if(newWithdrawAdded){
+
+      // var transporter = nodemailer.createTransport({
+      //   host: "http://smtp-mail.outlook.com/",
+      //   port: 587,
+      //   auth: {
+      //     user: "web@marfatia.net",
+      //     pass: "8_fPiz078@1234",
+      //   },
+      // });
+      // const mailOptions = {
+      //   from: "web@marfatia.net",
+      //   // to: "account@marfatia.net",
+      //   to: "dharvi.marwiz@gmail.com",
+      //   subject: "Withdraw Funds From Marfatia",
+      //   html: "Withdraw Funds request",
+      // };
+    
+      // const sentMail = await transporter.sendMail(mailOptions);
+      // console.log(sentMail);
+
+      // const transporter = nodemailer.createTransport({
+      //   host: "smtp.gmail.com",
+      //     port: 587,
+      //     secure: false,
+      //     auth: {
+      //       user: "web@marfatia.net",
+      //       pass: "8_fPiz078@1234",
+      //   },
+      // });
+
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "marwiz.tech@gmail.com",
+          pass: "abuoxineboamaqkm",
+        },
+      });
+
+      let mailOptions = {
+        from: 'marwiz.tech@gmail.com', 
+        to: 'account@marfatia.net',
+        subject: 'Withdraw Funds From Marfatia',
+        text: `Please withdraw funds from marfatia with the following details:\n
+               Client Code: ${newWithdrawAdded.ClientCode}\n
+               Name: ${newWithdrawAdded.Name}\n
+               Email: ${newWithdrawAdded.Email}\n
+               Contact Number: ${newWithdrawAdded.ContactNo}\n
+               PAN Number: ${newWithdrawAdded.PAN}\n
+               Amount: ${newWithdrawAdded.Amount}\n
+               Segment: ${newWithdrawAdded.Segment}\n`
+      };
+  
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log(error);
+          return res.status(500).send(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+          // res.json(add);
+          res.status(201).json({
+            data: newWithdrawAdded,
+            message: "Withdraw added successfully",
+          });
+        }
+      });
+    }
   // }
 });
 
