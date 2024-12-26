@@ -13,23 +13,23 @@ exports.getWithdraw = catchAsync(async (req, res, next) => {
 
 exports.addNewWithdraw = catchAsync(async (req, res, next) => {
   const body = {
-    ClientCode: req.body.ClientCode,
+    ClientCode: req.body.clinetCode,
 
-    Segment: req.body.Segment,
-    Name: req.body.Name,
-    Email: req.body.Email,
-    ContactNo: req.body.ContactNo,
-    PAN: req.body.PAN,
-    Amount: req.body.Amount,
+    Segment: req.body.segment,
+    Name: req.body.name,
+    Email: req.body.email,  
+    ContactNo: req.body.contactNumber,
+    PAN: req.body.panNo,
+    Amount: req.body.withdraw,
   };
 
-  if (WithdrawIsUnique) {
+  // if (WithdrawIsUnique) {
     const newWithdrawAdded = await withdraw.create(body);
     res.status(201).json({
       data: newWithdrawAdded,
       message: "Withdraw added successfully",
     });
-  }
+  // }
 });
 
 exports.getWithdrawById = catchAsync(async (req, res, next) => {
